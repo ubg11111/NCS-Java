@@ -47,7 +47,7 @@ public class Ex17 {
 		
 		// 다중 if~else 문을 이용하여 구현한 코드.
 		
-		if(position.equals("사장")) { // String의 조건문 == 비교연산자는 .equals(문자열비교)를 사용해야함. 
+		if(position.equals("사장")) { // String의 조건문 == 비교연산자는 .equals(문자열비교)메서드를 사용해야함. 
 			System.out.println("사장의 급여는 1,000만원 입니다.");
 		}else if(position.equals("전무")) {
 			System.out.println("전무의 급여는 800만원 입니다.");

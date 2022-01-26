@@ -16,7 +16,7 @@ import java.util.Scanner;
  *  		case 값3 : 값이3일때 실행문
  *  					break;
  *  		default : 값1 ~ 값3 이외의 값이 들어온 경우 실행문;
- *  					// 생략도 가능함.
+ *  					// 생략도 가능함. // else 문이랑 비슷함
  *  	}
  */
 
