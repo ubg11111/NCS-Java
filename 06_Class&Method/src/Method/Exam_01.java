@@ -10,6 +10,7 @@ public class Exam_01 {
 		
 		boolean over = true;
 		
+		
 		while(count < id.length) { 
 			System.out.print("학   번 입력 : ");
 		
@@ -91,15 +92,21 @@ public class Exam_01 {
 		}
 	}
 	
-	public static void end(Scanner sc) {
-		System.exit(0);
-		sc.close();
+	public static String end(Scanner sc) { // 시스템을 종료시키는 메서드
+		System.out.println("프로그램을 종료하시겠습니까? (Y/N) : " );
+		
+		String end = sc.next();
+		
+		return end;
+	
 	}
 	
 	public static void main(String[] args) {
 		
 				
 			Scanner sc = new Scanner(System.in);
+			
+			String end = "";
 			
 			System.out.print("학생 수 입력 : ");
 			
@@ -151,9 +158,12 @@ public class Exam_01 {
 							break;
 			
 						default:
-							System.out.println("[프로그램을 종료합니다.]");
-							end(sc);
+							end = end(sc);
 							break;
+					}
+					
+					if(end.equalsIgnoreCase("Y")) { // 대 소문자 상관없이 입력값을 적용
+						break;
 					}
 				}
 		}

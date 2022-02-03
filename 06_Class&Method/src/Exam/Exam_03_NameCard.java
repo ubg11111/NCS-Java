@@ -1,4 +1,4 @@
-package Class;
+package Exam;
 
 import java.util.Scanner;
 

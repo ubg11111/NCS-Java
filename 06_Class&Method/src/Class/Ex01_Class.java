@@ -120,5 +120,7 @@ public class Ex01_Class { // 클래스 헤더
 		ex1.num = 200;
 		ex1.str = "안녕하세요";
 		ex1.display();
+		
+		
 	}
 }

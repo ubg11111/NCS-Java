@@ -1,14 +1,17 @@
-package Class;
+package Exam;
 
 import java.util.Scanner;
 
-public class Exam_1_Person {
-		
+public class Exam01_Person {
+	
+	
+	// 멤버변수 선언 (전역변수)
 	String name;
 	String gender;
 	int age;
 	
 	
+	// 멤버메서드 (인스턴스메서드)
 	void display() {
 		
 		Scanner sc = new Scanner(System.in);
@@ -19,9 +22,9 @@ public class Exam_1_Person {
 	
 		if(gender == "male") {
 			gender = "male";
-		} else {
+		} else if(gender == "female"){
 			gender = "female";
-		}
+		} 
 		gender = sc.next();
 
 		age = sc.nextInt();
@@ -37,7 +40,7 @@ public class Exam_1_Person {
 	
 public static void main(String[] args) {
 		
-		Exam_1_Person person = new Exam_1_Person();
+		Exam01_Person person = new Exam01_Person();
 		
 		System.out.println("이름, 성별(male/female), 나이를 입력하세요.");
 		person.display();
