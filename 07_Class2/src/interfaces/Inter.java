@@ -16,7 +16,7 @@ package interfaces;
  * 5. 모든 변수는 상수가 된다.
  * 		예) public static final 로 인식을 함.
  * 6. 모든 메서드는 추상메서드가 된다.
- * 		예) public sbatract 로 인식을 함.
+ * 		예) public abstract 로 인식을 함.
  * 7. 인터페이스는 객체 생성이 불가능 함. (추상클래스와 동일) 구현부가 없기때문;;
  * 8. 자식클래스로 상속을 하여 자식클래스에서 객체 생성. 
  * 		==> 인터페이스의 추상메서드는 반드시 재정의(강제성이 부여됨).
@@ -33,8 +33,9 @@ package interfaces;
 
 public interface Inter { // 추상메서드가 다중으로 있는경우 클래스 => 인터페이스(상수 추상메서드만 구성)로 전환하여 사용한다
 	
-	/*final*/ int num = 50;  // 인스턴스 멤버변수 (interface에서 멤버를 선언하는 경우 상수로 적용이 된다.)
+	/*final*/ int num = 50;  // 인스턴스 멤버변수 (interface에서 멤버를 선언하는 경우 상수로 적용이 된다.) (절대적)
 	
+	// 다중 추상메서드 선언 (강제적)
 	void output1(); // 추상 메서드
 	void output2(); // 추상 메서드
 	
