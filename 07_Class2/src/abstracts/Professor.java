@@ -7,6 +7,7 @@ public class Professor extends Person{
 	
 	
 	public Professor() {} // 기본생성자
+	
 	public Professor(String name, String major) { // 매개변수 생성자
 		this.name = name;
 		this.major = major;

@@ -6,8 +6,8 @@ public class Student extends Person{
 	
 	public Student() {} // 기본생성자
 	
-	public Student(String name, String major) {
-		this.name = name;
+	public Student(String name, String major) { // 매개변수생성자
+		this.name = name; // this. 인스턴스변수를 가리킨다 
 		this.major = major;
 	}
 	
