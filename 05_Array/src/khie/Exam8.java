@@ -18,8 +18,8 @@ public class Exam8 {
 			sum += score[i];
 		}
 		
-		for(int i=0; i<score.length; i++) {
-			for(int j=0; j<score.length -1 -i; i++) {
+		for(int i=0; i<score.length -1 ; i++) {
+			for(int j=0; j<score.length -1 -i; j++) {
 				// score.length = {4,3,2,1,5}
 				// score[j] = 4 > score[j+1] = 3
 				// 4가 3보다 큰경우 if조건문에 의해 아래 조건문실행
@@ -36,9 +36,12 @@ public class Exam8 {
 				}
 			}
 		}
+		System.out.print("오름차순은 : ");
 		for(int i=0; i<score.length; i++) {
-			System.out.printf("오름차순 : %d%n", score[i] );
+			System.out.printf("%d\t",score[i]);
 		}
+		System.out.println();
+		System.out.println("========================================");
 		System.out.println("정수의 합은 : " + sum + "입니다");
 		sc.close();
 	}
