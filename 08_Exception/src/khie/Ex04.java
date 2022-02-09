@@ -36,7 +36,8 @@ public class Ex04 {
 		
 		try {
 			result = num1 / num2; // 10을 0으로 나눈경우 - 예외가 발생
-		} catch(ArithmeticException e) {
+		} catch(Exception e) {
+			e.printStackTrace();
 			System.out.println("0으로 나눈 예외가 발생 ~~");
 			System.out.println("예외정보 >>> " + e);
 			

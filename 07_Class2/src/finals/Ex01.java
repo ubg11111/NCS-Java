@@ -38,6 +38,8 @@ class BB extends AA{
 final class CC{}
 
 // final로 지정된 클래스는 다른 클래스의 조상 클래스(부모 클래스)가 될 수 없음.
+
+
 //	class DD extends CC{}
 
 public class Ex01 {
