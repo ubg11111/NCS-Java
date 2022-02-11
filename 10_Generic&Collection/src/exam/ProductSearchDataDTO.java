@@ -17,7 +17,7 @@ public class ProductSearchDataDTO {
 		map.put("냉장고", "지펠 냉장고 최신형");
 		map.put("TV", "HD 150인치 짱큰 TV");
 		
-		if(map.containsKey(product)) {
+		if(map.containsKey(product)) { // containsKey() map이 가진 키의 값이 있는 경우 체크하는 메서드
 			System.out.println(map.get(product));
 			JOptionPane.showMessageDialog(null, map.get(product));
 		} else {

@@ -32,11 +32,10 @@ public class Ex01 {
 		
 		// 생성을 할때 제네릭을 사용
 		// ArrayList 객체 생성
-		List<Object> list = new ArrayList<Object>();
+		List<String> list = new ArrayList<String>();
 		
 		// 1. add("값") : 데이터를 추가하는 메서드
 		list.add("안녕하세요");
-		list.add(123 + 123);
 		list.add("어서오세요"); // 중복 데이터
 		list.add("잘지내나요");
 		list.add("다행입니다");
@@ -49,7 +48,7 @@ public class Ex01 {
 	
 	
 		// 3. get(index) : list에 저장되어 있는 데이터를 출력해 주는 메서드.
-		System.out.println("list[3] 데이터 >>> " + (int)list.get(1));
+		System.out.println("list[2] 데이터 >>> " + list.get(1));
 		System.out.println();
 		
 		// list에 있는 모든 요소를 화면에 출력해 보자.
