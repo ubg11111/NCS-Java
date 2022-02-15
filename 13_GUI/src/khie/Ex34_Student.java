@@ -10,6 +10,8 @@ public class Ex34_Student extends JFrame{
 	
 	String name;
 	
+	
+	
 	public Ex34_Student() {
 		
 		setTitle("성적처리");
@@ -22,17 +24,18 @@ public class Ex34_Student extends JFrame{
 		
 		// 1-1 상단 컨테이너에 올릴 컴포넌트 만들기
 		JLabel jl1 = new JLabel("이름 : ");
-		JTextField name = new JTextField(10);
+		JTextField jtf1 = new JTextField(10);
 		
 		// 1-2 상단 컨테이너에 올릴 컴퍼넌트 만들기
 		JLabel jl2 = new JLabel("국어 : ");
-		JTextField kor = new JTextField(3);
+		JTextField jtf2 = new JTextField(3);
 		
 		JLabel jl3 = new JLabel("영어 : ");
-		JTextField eng = new JTextField(3);
+		JTextField jtf3 = new JTextField(3);
 		
 		JLabel jl4 = new JLabel("수학 : ");
-		JTextField mat = new JTextField(3);
+		JTextField jtf4 = new JTextField(3);
+		
 		
 		// 1-3 중단 컨테이너에 올릴 컴퍼넌트 만들기
 		
@@ -54,15 +57,15 @@ public class Ex34_Student extends JFrame{
 		
 		// 1-1 상단 컨테이너에 컴포넌트 올리기
 		container1.add(jl1);
-		container1.add(name);
+		container1.add(jtf1);
 		
 		// 1-2 중단 컨테이너에 컴포넌트 올리기
 		container2.add(jl2);
-		container2.add(kor);
+		container2.add(jtf2);
 		container2.add(jl3);
-		container2.add(eng);
+		container2.add(jtf3);
 		container2.add(jl4);
-		container2.add(mat);
+		container2.add(jtf4);
 		
 		// 1-3 하단 컨테이너에 컴포넌트 올리기.
 		container3.add(result);
@@ -91,41 +94,81 @@ public class Ex34_Student extends JFrame{
 		
 		
 		// 4. 이벤트 처리하기
+		
+		
+		// 계산(result)를 눌럿을 때 이벤트 처리
 		result.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				String result = "";
+				String name = jtf1.getText();
+				int kor = Integer.parseInt(jtf2.getText());
+				int eng = Integer.parseInt(jtf3.getText());
+				int mat = Integer.parseInt(jtf4.getText());
 				
-				String name1 = name.getText();
-				int kor1 = Integer.parseInt(kor.getText());
-				int eng1 = Integer.parseInt(eng.getText());
-				int mat1 = Integer.parseInt(mat.getText());
-				int sum = (kor1 + eng1 + mat1);
+				//총점을 구하자
+				int sum = (kor+eng+mat);
 				
+				// 평균을 구하자
 				double avg = (sum) / 3.0;
 				
+				// 학점을 구하자.
+				String grade = "";
 				
 				if(90 < avg) {
-					jta.setText("A학점");
+					grade = "A학점";
 				} else if(80 < avg) {
-					jta.setText("B학점");
+					grade = "B학점";
 				} else if(70 < avg) {
-					jta.setText("C학점");
+					grade = "C학점";
 				} else if(60 < avg) {
-					jta.setText("D학점");
+					grade = "D학점";
 				} else {
-					jta.setText("E학점");
+					grade = "E학점";
 				}
 				
-				jta.append(result + "\n");
+				jta.append("****" + name + "님 성적결과****" + "\n");
+				jta.append("이름 : " + name + "\n");
+				jta.append("국어점수 " + kor + "점\n");
+				jta.append("영어점수 " + eng + "점\n");
+				jta.append("수학점수" + mat + "점\n");
+				jta.append("총점" + sum + "점\n");
+				jta.append("평균" + String.format("%.2f점",avg) + "\n");
+				jta.append("학점" + grade + "\n");
 				
+				jtf1.setText("");
+				jtf2.setText(null);
+				jtf3.setText(null);
+				jtf4.setText(null);
 				
-				
+				jtf1.requestFocus();
 			}
 		});
+		// 4-2. 종료(exit) 버튼을 클릭햇을 때 이벤트 처리
+		exit.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		// 4-3 취소(cancel) 버튼을 클릭했을 때 이벤트 처리
 		
+		cancel.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// 전체 컴포넌트의 값을 초기화 시키는 작업.
+				jtf1.setText(""); 
+				jtf2.setText(null);
+				jtf3.setText(null);
+				jtf4.setText(null);		
+				jta.setText(null);
+				
+				jtf1.requestFocus();
+			}
+		});
 	}
 	
 	public static void main(String[] args) {
