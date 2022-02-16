@@ -33,7 +33,7 @@ public class Ex04 {
 		
 		String[] str2 = {"김유신","김유신","김유신"};
 		
-		// 2. equals() : 두 객체의 내용(데이터)이 같은지 틀린지를 비교하는 메서드.
+		// 2. equals() : 두 객체의 내용(데이터)이 같은지 틀린지를 비교하는 메서드. (문자열을 비교하는 메서드)
 		if(Arrays.equals(str, str2)) {
 			System.out.println("두객체의 내용(데이터)은 같습니다.");
 		} else {

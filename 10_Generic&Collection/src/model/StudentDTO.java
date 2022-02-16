@@ -16,7 +16,6 @@ public class StudentDTO {
 	private String addres;
 	
 	
-	StudentDTO(){} // 기본생성자 생성
 	
 	public StudentDTO(int huckbun, String name, String major, String phone , String addres){ // 매개변수 생성자
 		this.huckbun = huckbun;
@@ -25,6 +24,7 @@ public class StudentDTO {
 		this.phone = phone;
 		this.addres = addres;
 	}
+
 
 	public int getHuckbun() {
 		return huckbun;

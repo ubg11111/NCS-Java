@@ -35,6 +35,7 @@ public class Ex01 {
 		List<String> list = new ArrayList<String>();
 		
 		// 1. add("값") : 데이터를 추가하는 메서드
+		// ArrayList는 배열값을 한가지씩 출력은 가능하다. 다만 중복데이터까지 같이 허용해버린다.
 		list.add("안녕하세요");
 		list.add("어서오세요"); // 중복 데이터
 		list.add("잘지내나요");

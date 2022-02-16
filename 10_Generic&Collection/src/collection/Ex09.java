@@ -18,6 +18,7 @@ public class Ex09 {
 	public static void main(String[] args) {
 		
 		// Map 인터페이스의 자식클래스를 이용하여 객체 생성.
+		// Map<key,value> 자료형을 넣어주면 된다.
 		Map<String,Integer> map = new HashMap<String,Integer>();
 		
 		// 1. put() : map에 데이터를 저장하는 메서드.

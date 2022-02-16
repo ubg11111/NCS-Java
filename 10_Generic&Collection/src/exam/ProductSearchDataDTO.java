@@ -8,7 +8,7 @@ public class ProductSearchDataDTO {
 	
 	public static void main(String[] args) {
 		
-		Map<String, String> map = new HashMap<String, String>();
+		Map<Object, Object> map = new HashMap<Object, Object>();
 		
 		String product = JOptionPane.showInputDialog("검색할 상품명을 입력하세요.");
 		

@@ -16,7 +16,7 @@ package singleton;
 
 public class Company {
 	
-	private static Company instance = null;
+	private static Company singleton; // null이란 값이 생략되어 있다.
 	
 	private int volume;
 	
@@ -33,18 +33,18 @@ public class Company {
 	};
 	
 	public static Company getInstance() {
-		if(instance == null) {
-			instance = new Company();
+		if(singleton == null) { // 싱글턴이 null이면.. 싱글턴 Company 클래스에 객체를 생성해서 리턴해주는 조건문
+			singleton = new Company();
 		}
 		
-		return instance;
+		return singleton; // 객체를 생성해서 반환해줌
 	}
 	
 	public static Company getCar() {
-		if(instance == null) {
-			instance = new Company();
+		if(singleton == null) {
+			singleton = new Company();
 		}
 		
-		return instance;
+		return singleton;
 	}
 }

@@ -13,7 +13,7 @@ public class Ex04 {
 
 	public static void main(String[] args) {
 		
-		List<MemberDTO> list = new ArrayList<MemberDTO>();
+		ArrayList<MemberDTO> list = new ArrayList<MemberDTO>();
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -30,7 +30,8 @@ public class Ex04 {
 			
 			// dto 참조변수가 객체를 생성할 때 마다 리스트의 객체주소에 추가된다. 0번째 1번째 2번째 .... 
 			MemberDTO dto = new MemberDTO(sc.next(),sc.next(),sc.nextInt(),sc.next(),sc.next());
-		
+			
+			
 			// 주소값 추가 새로 생성 0x100 ....
 			list.add(dto);
 		}
@@ -38,7 +39,7 @@ public class Ex04 {
 		// 리스트 0번째에 MemberDTO를 가져옴
 //		System.out.println("list[0] >>> " + list.get(0));
 		
-		System.out.println("아이디\t이름\t나이\t연락처\t주소");
+		System.out.println("아이디\t이름\t나이\t연락처\t\t주소");
 		
 		// 2. list에 들어 있는 데이터들을 화면에 출력해 보자.
 		

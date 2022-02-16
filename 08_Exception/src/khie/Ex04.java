@@ -40,10 +40,16 @@ public class Ex04 {
 			e.printStackTrace();
 			System.out.println("0으로 나눈 예외가 발생 ~~");
 			System.out.println("예외정보 >>> " + e);
-			
 		}
-		System.out.println("result >>> " + result);
+		finally {
+			if(result !=0) {
+				System.out.println("나누기성공");
+			} else {
+				System.out.println("나누기실패");
+			}
+		}
 		
+		System.out.println("result >>> " + result);
 		System.out.println("프로그램 종료");
 	}
 }
