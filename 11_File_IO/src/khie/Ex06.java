@@ -20,7 +20,7 @@ import java.nio.Buffer;
 
 public class Ex06 {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Exception {
 		
 		InputStreamReader isr = 
 				new InputStreamReader(System.in);
