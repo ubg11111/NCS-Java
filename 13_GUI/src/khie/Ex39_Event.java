@@ -48,6 +48,7 @@ public class Ex39_Event extends JFrame{
 		label.setFont(new Font("맑은 고딕",Font.ITALIC, 25));
 		
 		
+		// 정렬
 		label.setHorizontalAlignment(SwingConstants.CENTER);
 		
 		// 2. 컴포넌트를 컨테이너에 올려야 한다.

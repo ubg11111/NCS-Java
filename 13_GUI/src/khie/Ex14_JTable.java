@@ -34,7 +34,8 @@ public class Ex14_JTable extends JFrame {
 				// 수직으로 스크롤바를 보여줄지 여부 확인
 				ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
 				// 수평으로 스크롤바를 보여줄지 여부 확인
-				ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+				ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER
+				);
 		
 		// 2. 컴포넌트를 프레임에 올려야 한다.
 		add(jsp);

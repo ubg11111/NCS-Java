@@ -51,7 +51,6 @@ public class Dept extends JFrame{
 		 */
 		
 		model = new DefaultTableModel(header, 0);
-		
 		table = new JTable(model);
 		JScrollPane jsp = new JScrollPane(
 				table,
