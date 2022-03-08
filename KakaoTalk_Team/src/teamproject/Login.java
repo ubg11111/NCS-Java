@@ -17,9 +17,8 @@ import java.sql.SQLException;
 import javax.swing.*;
 
 
-
-
 public class Login extends JFrame {
+
 	
 	Connection con = null;
 	PreparedStatement pstmt = null;
@@ -33,10 +32,8 @@ public class Login extends JFrame {
 	public Login() {
 		// 기본생성자
 		
-		
 		   setTitle("깨깨오톡 로그인");
 	   
-		   
 		   	//1-1. 상단에 들어갈 그림 또는 내용.   
 	        JPanel container1 = new JPanel(new FlowLayout(FlowLayout.CENTER,50,90));
 	        JLabel image = new JLabel(new ImageIcon("src/images/KakaoTalk2.jpg"));
@@ -97,7 +94,7 @@ public class Login extends JFrame {
 
 	 		//이벤트 처리
 	         
-	        //로그인 버튼
+	        //로그인 마우스 버튼 클릭시
 	 		login.addActionListener(new ActionListener() {
 	 			
 	 			@Override
@@ -108,11 +105,12 @@ public class Login extends JFrame {
 	 					JOptionPane.showMessageDialog(null, "패스워드를 입력하세요");
 	 				}else {
 	 				
-	 				
 	 				connect();
 	 				int result = confirm(id.getText(), pwd.getText().trim());
 	 				if(result == 1 ) {
 	 					//로그인 성공 -- 연동
+	 	 				new Main();
+		 				dispose();
 	 				}else if(result == 2) {
 	 					JOptionPane.showMessageDialog(null, "비밀번호가 틀립니다.");
 	 				}else if(result == 3) {
@@ -124,10 +122,46 @@ public class Login extends JFrame {
 	 				id.requestFocus();
 	 				}
 	 				
-	 				new Main();
-	 				dispose();
 	 			}
 	 		});
+	 		
+			// 엔터를 쳣을 때 이벤트 처리
+	 		pwd.addKeyListener(new KeyListener() {
+				@Override
+				public void keyTyped(KeyEvent e) {}
+				@Override
+				public void keyReleased(KeyEvent e) {}
+				@Override
+				public void keyPressed(KeyEvent e) {
+					if(e.getKeyCode() == KeyEvent.VK_ENTER) {
+						
+						if(id.getText().equals("")) {
+		 					JOptionPane.showMessageDialog(null, "아이디를 입력하세요");
+		 				}else if(pwd.getText().trim().equals("")) {
+		 					JOptionPane.showMessageDialog(null, "패스워드를 입력하세요");
+		 				}else {
+						
+		 				connect();
+		 				int result = confirm(id.getText(), pwd.getText().trim());
+		 				if(result == 1 ) {
+		 					//로그인 성공 -- 연동
+		 	 				new Main();
+			 				dispose();
+		 				}else if(result == 2) {
+		 					JOptionPane.showMessageDialog(null, "비밀번호가 틀립니다.");
+		 				}else if(result == 3) {
+		 					JOptionPane.showMessageDialog(null, "존재하지 않는 아이디입니다.");
+		 				}
+		 				id.setText("");
+		 				pwd.setText("");
+		 				id.requestFocus();
+		 				}
+					}
+				}
+			});
+	 		
+	 		
+	 		// 회원가입버튼을 누르는경우 이벤트처리
 	 		
 	 		join.addMouseListener(new MouseListener() {
 				
@@ -221,6 +255,7 @@ public class Login extends JFrame {
 
 	public static void main(String[] args) {
 		new Login();
-
+		
+		System.out.println();
 	}
 }
