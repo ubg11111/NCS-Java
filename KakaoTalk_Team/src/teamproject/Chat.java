@@ -1,4 +1,4 @@
-package project;
+package teamproject;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -18,7 +18,7 @@ public class Chat extends JFrame{
 	
 	public Chat() {
 		setTitle("채팅창");
-		color = new Color(175,238,238); // 색 지정해주기
+		color = new Color(051,153,255); // 색 지정해주기
 		
 		// 컨테이너 만들기
 		displayPanel = new JPanel();
@@ -151,7 +151,7 @@ public class Chat extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new Shop();
+				new Main();
 				dispose();
 			}
 		});

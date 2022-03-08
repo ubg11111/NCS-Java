@@ -1,10 +1,10 @@
-package project;
+package teamproject;
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
 
-public class ImageChage {
-	ImageChage(){}; // 기본생성자 생성
+public class ImageChage2 {
+	ImageChage2(){}; // 기본생성자 생성
 	
 	// 첫번째 이미지 변환
 	public static ImageIcon icon1 = new ImageIcon("src/images/따봉라이언.jpg");

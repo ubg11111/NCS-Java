@@ -1,4 +1,4 @@
-package project;
+package teamproject;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -169,6 +169,8 @@ public class Shop extends JFrame{
 		Color color1 = new Color(255,212,0); // 연한 노란색
 		Color color2 = new Color(204,204,204); // 연한 그레이
 		Color color3 = new Color(255,250,250); // 하얀색
+		Color color4 = new Color(204,102,0); // 갈색
+		Color color5 = new Color(239,250,46); // 포옐로우1
 		
 		
 		// 상단 색
@@ -197,7 +199,7 @@ public class Shop extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new Chat();
+				new Main();
 				dispose();
 			}
 		}); // back() 메서드의 end
